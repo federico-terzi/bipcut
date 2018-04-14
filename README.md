@@ -1,15 +1,25 @@
 # bipcut
 ### What is bitcut?
 
-**bitcut** is a small utility made using Python, Scipy and FFmpeg, that makes possible to extract video/audio clips using soundwaves.
+**bitcut** is a small utility made using *Python*, *Scipy* and *FFmpeg*, that makes possible to extract video/audio clips using soundwaves. It uses a *Fast Fourier Transform* to detect when a specific soundwave is played in the video and, based on the tone frequency, cut or skip the clip.
 
-### Using bitcut
+### Installation
 
 Make sure to have Python 3 with *scipy* and *more_itertools* installed.
 
 `pip3 install scipy more_itertools`
 
 You will also need to install *FFmpeg* on your system, and add it to the PATH environment variable.
+
+### Using bitcut
+
+Using **bitcut** is pretty straightforward, just invoke it like this:
+
+`python3 bipcut.py <INPUT_FILE> <OUTPUT_DIRECTORY> <OUTPUT_FORMAT>`
+
+For example: 
+
+`python3 bipcut.py /path/to/the/video.mp4 /output/directory mp4`
 
 ### License
 
