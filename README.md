@@ -11,6 +11,8 @@ Make sure to have Python 3 with *scipy* and *more_itertools* installed.
 
 You will also need to install *FFmpeg* on your system, and add it to the PATH environment variable.
 
+You can find the bipcut Android App here: https://github.com/federico-terzi/bipcut-remote
+
 ### Using bitcut
 
 Using **bitcut** is pretty straightforward, just invoke it like this:
