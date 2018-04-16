@@ -246,19 +246,18 @@ for time_marker in time_markers:
 	# Check the meaning of the marker, and execute the corresponding action
 	if time_marker['freq'] == START_CLIP_FREQ:
 		print("START AT:", time_marker['time'])
-		# If not at the beginning, the START segnal is used to confirm the last segment
-		if start_time != 0:
-			# Confirming the last segment
-			# Update the end time and remove the beep sound duration
-			end_time = time_marker['time'] - BEEP_DURATION - 0.2
+		# Confirming the last segment
+		# Update the end time and remove the beep sound duration
+		end_time = time_marker['time'] - BEEP_DURATION - 0.2
 
-			# Create the clip filename
-			clip_filename = os.path.basename(input_file) + "." + str(round(time_marker['time'])) + "." + output_format
-			clip_path = os.path.join(output_dir, clip_filename)
+		# Create the clip filename
+		clip_filename = os.path.basename(input_file) + "." + str(round(time_marker['time'])) + "." + output_format
+		clip_path = os.path.join(output_dir, clip_filename)
 
-			# Extract the clip
-			ffmpeg_extract_clip(ffmpeg_path, input_file, clip_path, start_time, end_time)
-			print("Extracted clip between START:", start_time, "END:", end_time)
+		# Extract the clip
+		ffmpeg_extract_clip(ffmpeg_path, input_file, clip_path, start_time, end_time)
+		print("Extracted clip between START:", start_time, "END:", end_time)
+			
 		# Reset the start time
 		start_time = time_marker['time']
 	elif time_marker['freq'] == ERROR_CLIP_FREQ:
