@@ -35,14 +35,14 @@ FFMPEG_PATH = None
 
 # Configure which frequencies BIPCUT should recognize
 # NOTE: if you add another frequency, you should add it to TARGET_FREQS as well
-START_CLIP_FREQ = 1000    # Frequency to Start a new clip ( and confirm the previous ) ( Hertz )
-ERROR_CLIP_FREQ = 1300    # Frequency to discard the last clip ( Hertz )
+START_CLIP_FREQ = 2000    # Frequency to Start a new clip ( and confirm the previous ) ( Hertz )
+ERROR_CLIP_FREQ = 2600    # Frequency to discard the last clip ( Hertz )
 
 # These are the frequencies that will be checked
 TARGET_FREQS = (START_CLIP_FREQ, ERROR_CLIP_FREQ)
 
 # The duration of the BEEP in seconds
-BEEP_DURATION = 0.5
+BEEP_DURATION = 0.4
 
 #######################################################################################
 # Methods
