@@ -198,7 +198,7 @@ def ffmpeg_extract_clip(ffmpeg_path, original_file, output_file, start, stop):
 	#ffmpeg -ss 4.63482993197 -to 14.8733106576 -i "D:\\Dropbox\\Caricamenti da fotocamera\\rec.wav" output.mp3
 
 	# Execute ffmpeg to extract the clip
-	p = subprocess.Popen([ffmpeg_path, "-y", "-i", original_file, "-vcodec", "copy", "-acodec", "copy", "-ss", str(start), "-to", str(stop), output_file])
+	p = subprocess.Popen([ffmpeg_path, "-y", "-i", original_file, "-c", "copy", "-ss", str(start), "-to", str(stop), output_file])
 	return_code = p.wait()
 
 	# Make sure the ffmpeg executed correctly by checking the exit code
