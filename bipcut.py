@@ -20,6 +20,9 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+
+print('Hollo from Data')
+
 from __future__ import division, print_function
 from scipy.io import wavfile
 import numpy as np
