@@ -3,6 +3,8 @@
 
 **bitcut** is a small utility made using *Python*, *Scipy* and *FFmpeg*, that makes possible to extract video/audio clips using soundwaves. It uses a *Fast Fourier Transform* to detect when a specific soundwave is played in the video and, based on the tone frequency, cut or skip the clip.
 
+Note: This is completely lossless using `ffmpeg copy` :)
+
 ##### Demo video
 
 ( Click on it to see it )
