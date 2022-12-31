@@ -1,0 +1,36 @@
+<html>
+<body>
+<button onclick="good()">Good</button>
+<button onclick="bad()">Bad</button>
+
+<audio id="good_audio" src="500.wav"></audio>
+<audio id="bad_audio" src="800.wav"></audio>
+
+<script>
+const good_audio = document.getElementById("good_audio");
+const bad_audio = document.getElementById("bad_audio");
+
+function good()
+{
+  bad_audio.pause();
+  good_audio.play();
+
+  setInterval(function(){
+	  good_audio.pause();
+	},1000
+  );
+}
+
+function bad()
+{
+  good_audio.pause();
+  bad_audio.play();
+
+  setInterval(function(){
+	  bad_audio.pause();
+	},1000
+  );
+}
+</script>
+</body>
+</html>
