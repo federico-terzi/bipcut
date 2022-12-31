@@ -1,4 +1,4 @@
-[App](./audio)
+[App](./app)
 
 # bipcut
 ### What is bitcut?
